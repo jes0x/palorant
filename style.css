@@ -1,0 +1,707 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #003366;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.3s ease;
+            z-index: 999;
+        }
+
+        .nav-menu a {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        nav {
+            width: 100%;
+        }
+    }
+
+@media screen and (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* HOME */
+header {
+    position:fixed;
+    background-color: #003366;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display:flex;
+    align-items: center;
+    z-index: 100;
+}
+
+nav{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;   
+    
+}
+
+#menuu {
+    height: 40px;
+    margin-top: 5px; 
+}
+
+nav img {
+    width: 40px;
+}
+
+.logo{
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'raleway', sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-right: 50px;
+    display: flex;
+}
+
+.home {
+    background: rgb(196, 198, 255); 
+    padding: 0 16px 0 16px; 
+    border-radius: 20px; 
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nama {
+    font-weight: bold;
+    color: #003366;
+    margin: 0px; 
+    margin-right: 370px; 
+}
+
+.menu {
+    justify-content: center;
+    align-items: center;
+}
+
+.menu:hover{
+    background: rgb(196, 198, 255);
+    color: #003366;
+    transition: .5s;
+    padding: 0 16px 0 16px; 
+    border-radius: 20px; 
+}
+
+body{
+    background-color: black;
+    background-size: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+}
+
+.bekgron {
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+     width:100%;
+    height:100%; 
+    
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.imgBekgron {
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    max-height: 550px;
+    width:100%;
+    height:100%; 
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+}
+
+.imgBekgron-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .homebawah {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .img-container {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+  }
+  
+  .imgBekgron {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+  }
+  
+  .tulisan {
+    position: absolute;
+    top: 50%; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .tulisan.left {
+    left: 10%; 
+    text-align: left;
+  }
+  
+  .tulisan.right {
+    right: 10%; 
+    text-align: right;
+  }
+  
+  .tulisan h1 {
+    font-size: 4rem; 
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 
+               0 0 10px rgba(255, 255, 255, 0.8); 
+  }
+  
+  .tulisan p {
+    font-size: 1.2rem; 
+    margin: 0;
+  }
+  
+  .tulisan button {
+    border: 5px solid lightblue; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white;
+    padding: 10px 20px; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 20px; 
+  }
+  
+  .tulisan button:hover {
+    background-color: lightblue; 
+    color: white; 
+  }
+
+.agents, .maps {
+    position: relative;
+    width: 50%; 
+}
+
+.mainPage {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    padding: 20px; 
+}
+
+
+.mainPage h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 700; 
+    font-size: 80px;
+    text-align: center;
+    margin-top: 80px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 
+    0 0 10px rgba(255, 255, 255, 0.8); 
+}
+
+h1,p{
+    margin: 2px;
+    text-align: center;
+}
+
+.text {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 60px; 
+    text-align: left; 
+    margin-top: 100px; 
+    align-items: center;
+    margin-left: 50px; 
+    color: white; 
+}
+
+/* REPORT BUG */
+
+.report{
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.form {
+    margin: 20px auto; 
+    max-width: 650px; 
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    color: white;
+    font-family: 'raleway', sans-serif;
+}
+
+input[type="text"], textarea {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: rgb(81, 81, 81); 
+    color: #fff; 
+    border: 1px solid rgb(81, 81, 81); 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #003366; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: blue; 
+}
+
+/* MAPS */
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    gap: 10px; 
+    padding: 15px;
+    color:white;
+}
+
+.map img {
+    max-width: 100%; 
+    height: auto;
+    object-fit: cover; 
+    transition: all 0.5s ease; 
+}
+
+
+.map img:hover {
+    box-shadow: 0 0 20px 10px white; 
+}
+
+.map h2{
+    font-size: 40px; 
+    font-weight: bold; 
+    color: white; 
+    margin: 10px 0;
+    text-align: center; 
+    font-family: 'Cinzel', serif;
+}
+
+.map p{
+    font-size: 20px;
+    font-family: 'Radley', serif;
+}
+
+/* NEWS */
+.letak {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px;
+}
+
+.kotak {
+    display: flex;
+    background-color: #003366;
+    width: 80%;
+    overflow: hidden;
+}
+
+.kotak img {
+    width: 40%;
+    height: auto;
+}
+
+
+.isi {
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+    color:white;
+}
+
+.isi h1 {
+    font-family: 'raleway', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.isi p {
+    font-family: 'raleway', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+#button:hover {
+    background-color: white;
+}
+
+/* AGENTS */
+.letak2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0px auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.kartu {
+    position: relative;
+    background-color: #003366;
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.isikartu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.depan, .belakang {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #003366;
+}
+
+
+.depan {
+    color: white;
+}
+
+.depan img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.nama {
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+}
+
+.belakang {
+    background: #003366;
+    color: white;
+    transform: rotateX(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+.abilities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'raleway', sans-serif;
+}
+
+.ability img {
+    width: 40px;
+    height: 40px;
+}
+
+.ability span {
+    margin-top: 5px;
+}
+
+.role {
+    color: yellow;
+}
+
+/* FOOTER */
+.footer{
+    padding: 20px;
+    background-color: #003366;
+}
+.socmed {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 10px;
+}
+
+.socmed a {
+    margin: 0; 
+    padding: 0; 
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0; 
+}
+
+.youtube {
+    width: 40px;
+    height: 40px;    
+  }
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-family: 'raleway', sans-serif;
+    color:white;
+  }
+
+
+/* responsive */
+@media screen and (max-width: 1024px) {
+    .nav-menu a {
+        font-size: 20px;
+    }
+
+    .mainPage h1 {
+        font-size: 50px;
+    }
+
+    .text {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .kartu {
+        max-width: 200px;
+        height: 350px;
+    }
+
+    .letak2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainPage h1 {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .imgBekgron-container {
+        gap: 10px;
+    }
+
+    .map h2 {
+        font-size: 30px;
+    }
+
+    .map p {
+        font-size: 16px;
+    }
+
+    .kotak {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .kotak img {
+        width: 100%;
+    }
+
+    .letak2 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .mainPage h1 {
+        font-size: 30px;
+    }
+
+    .text {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .kartu {
+        max-width: 150px;
+        height: 300px;
+    }
+
+    .letak2 {
+        gap: 10px;
+    }
+
+    .form {
+        margin: 0 20px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
